@@ -1,5 +1,10 @@
 import { h, Component, render } from 'https://unpkg.com/preact?module';
+import htm from 'https://unpkg.com/htm?module';
 
-const app = h('h1', null, 'Olá mundo!');
+const html = htm.bind(h);
 
-render(app, document.body);
+function App(props) {
+    return html`<h1>${props.message}</h1>`;
+}
+
+render(html`<${App} message="Olá mundo!!!" />`, document.body);
