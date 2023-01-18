@@ -15,29 +15,29 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form class="border p-3" action="" method="get">
+                <form id="quizz-form" class="border p-3 needs-validation" action="" method="get">
                     <h1>Quiz de conhecimentos gerais 5ª ano</h1>
                     <fieldset class="border p-3 mb-2">
                         <legend>Quantos continentes existem?</legend>
                         <div class="form-check">
                             <label class="form-check-label" for="q001-a">a) 2</label>
-                            <input class="form-check-input" id="q001-a" type="radio" name="q001" value="2">
+                            <input class="form-check-input" id="q001-a" type="radio" name="q001" value="2" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q001-b">b) 8</label>
-                            <input class="form-check-input" id="q001-b" type="radio" name="q001" value="8">
+                            <input class="form-check-input" id="q001-b" type="radio" name="q001" value="8" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q001-c">c) 4</label>
-                            <input class="form-check-input" id="q001-c" type="radio" name="q001" value="4">
+                            <input class="form-check-input" id="q001-c" type="radio" name="q001" value="4" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q001-d">d) 6</label>
-                            <input class="form-check-input" id="q001-d" type="radio" name="q001" value="6">
+                            <input class="form-check-input" id="q001-d" type="radio" name="q001" value="6" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q001-e">e) 3</label>
-                            <input class="form-check-input" id="q001-e" type="radio" name="q001" value="3">
+                            <input class="form-check-input" id="q001-e" type="radio" name="q001" value="3" required>
                         </div>
                     </fieldset>
 
@@ -45,23 +45,23 @@
                         <legend>Qual a maior floresta tropical do mundo?</legend>
                         <div class="form-check">
                             <label class="form-check-label" for="q002-a">a) Mata Atlântica</label>
-                            <input class="form-check-input" id="q002-a" type="radio" name="q002" value="Mata Atlântica">
+                            <input class="form-check-input" id="q002-a" type="radio" name="q002" value="Mata Atlântica" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q002-b">b) Pampas</label>
-                            <input class="form-check-input" id="q002-b" type="radio" name="q002" value="Pampas">
+                            <input class="form-check-input" id="q002-b" type="radio" name="q002" value="Pampas" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q002-c">c) Pantanal</label>
-                            <input class="form-check-input" id="q002-c" type="radio" name="q002" value="Pantanal">
+                            <input class="form-check-input" id="q002-c" type="radio" name="q002" value="Pantanal" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q002-d">d) Floresta Amazônica</label>
-                            <input class="form-check-input" id="q002-d" type="radio" name="q002" value="Floresta Amazônica">
+                            <input class="form-check-input" id="q002-d" type="radio" name="q002" value="Floresta Amazônica" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q002-e">e) Caatinga</label>
-                            <input class="form-check-input" id="q002-e" type="radio" name="q002" value="Caatinga">
+                            <input class="form-check-input" id="q002-e" type="radio" name="q002" value="Caatinga" required>
                         </div>
                     </fieldset>
 
@@ -69,29 +69,40 @@
                         <legend>Em que ano foi usado um celular pela primeira vez no Brasil?</legend>
                         <div class="form-check">
                             <label class="form-check-label" for="q003-a">a) 1900</label>
-                            <input class="form-check-input" id="q003-a" type="radio" name="q003" value="1900">
+                            <input class="form-check-input" id="q003-a" type="radio" name="q003" value="1900" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q003-b">b) 1990</label>
-                            <input class="form-check-input" id="q003-b" type="radio" name="q003" value="1990">
+                            <input class="form-check-input" id="q003-b" type="radio" name="q003" value="1990" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q003-c">c) 1890</label>
-                            <input class="form-check-input" id="q003-c" type="radio" name="q003" value="1890">
+                            <input class="form-check-input" id="q003-c" type="radio" name="q003" value="1890" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q003-d">d) 2000</label>
-                            <input class="form-check-input" id="q003-d" type="radio" name="q003" value="2000">
+                            <input class="form-check-input" id="q003-d" type="radio" name="q003" value="2000" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="q003-e">e) 1970</label>
-                            <input class="form-check-input" id="q003-e" type="radio" name="q003" value="1970">
+                            <input class="form-check-input" id="q003-e" type="radio" name="q003" value="1970" required>
                         </div>
                     </fieldset>
+
+                    <button class="btn btn-primary" type="submit">Respostas</button>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        'use strict';
+
+        let quizzForm = document.getElementById('quizz-form');
+        quizzForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            quizzForm.classList.add('was-validated');
+        });
+    </script>
 </body>
 
 </html>
