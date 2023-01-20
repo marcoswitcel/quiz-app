@@ -90,6 +90,7 @@
                     </fieldset>
 
                     <button class="btn btn-primary" type="submit">Respostas</button>
+                    <button id="reset-button" class="btn btn-secondary btn-sm" type="reset">Reset</button>
                 </form>
             </div>
         </div>
@@ -97,11 +98,37 @@
     <script>
         'use strict';
 
-        let quizzForm = document.getElementById('quizz-form');
+        const anwsers = {
+            q001: '2',
+            q002: 'Floresta Amazônica',
+            q003: '1990',
+        };
+        const quizzForm = document.getElementById('quizz-form');
+        const resetButton = document.getElementById('reset-button');
+
         quizzForm.addEventListener('submit', (event) => {
             event.preventDefault();
-            quizzForm.classList.add('was-validated');
+
+            for (const radioGroupName of Object.keys(anwsers)) {
+                const correct = quizzForm[radioGroupName].value === anwsers[radioGroupName];
+
+                for (const radioElement of quizzForm[radioGroupName]) {
+                    radioElement.classList.remove('is-valid', 'is-invalid');
+                    radioElement.disabled = true;
+                    
+                    if (radioElement.checked) {
+                        radioElement.classList.add(correct ? 'is-valid' : 'is-invalid');
+                    }
+                }
+            }
         });
+
+        resetButton.addEventListener('click', () => {
+            quizzForm.querySelectorAll('.form-check-input').forEach(radioElement => {
+                radioElement.disabled = false;
+                radioElement.classList.remove('is-valid', 'is-invalid');
+            });
+        })
     </script>
 </body>
 
